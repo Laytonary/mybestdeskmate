@@ -11,10 +11,11 @@
             padding: 0;
             font-family: Arial, sans-serif;
             background: linear-gradient(to bottom, #ff9966, #ff5e62); /* Replace with your desired gradient colors */
-            height: 100vh;
+            height: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
+            position:fixed;
         }
 
         .overlay {
@@ -33,16 +34,13 @@
         .content {
     text-align: center;
     z-index: 0;
-    width: 80%;
+    margin:20px;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     margin: 0 auto;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
         .password-input {
