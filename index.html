@@ -13,7 +13,7 @@
             align-items: center;
             justify-content: center;
         }
-        
+
         .overlay {
             position: absolute;
             top: 0;
@@ -26,20 +26,24 @@
             justify-content: center;
             z-index: 2;
         }
-        
+
         .content {
             text-align: center;
-            z-index: 3;
+            z-index: 0;
         }
-        
+
         .password-input {
-            display: inline-block;
+            display: block;
+            margin: 10px auto;
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
             font-size: 16px;
+            width: 80%;
+            max-width: 300px;
+            box-sizing: border-box;
         }
-        
+
         .hidden {
             display: none;
         }
@@ -48,8 +52,8 @@
         function validatePassword() {
             var passwordInput = document.getElementById("password");
             var password = passwordInput.value;
-            
-            if (password === "tranminhngoc") { // Replace "yourpassword" with the actual password
+
+            if (password === "yourpassword") { // Replace "yourpassword" with the actual password
                 document.getElementById("overlay").classList.add("hidden");
             } else {
                 alert("Incorrect password! Please try again.");
@@ -60,15 +64,15 @@
 <body>
     <div class="overlay" id="overlay">
         <div class="content">
-            <input type="password" class="password-input" id="password">
-            <br>
+            <h1>Please enter the password:</h1>
+            <input type="password" class="password-input" id="password" placeholder="Password">
             <button onclick="validatePassword()">Submit</button>
         </div>
     </div>
 
     <div class="content">
-        <h1>a</h1>
-        <p>b</p>
+        <h1>W</h1>
+        <p>Th</p>
     </div>
 </body>
 </html>
