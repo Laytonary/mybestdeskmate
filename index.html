@@ -1,88 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gradient Background with Password Layer</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom, #ff9966, #ff5e62); /* Replace with your desired gradient colors */
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position:fixed;
-        }
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Bootstrap Theme Simply Me</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 20px Montserrat, sans-serif;
+    line-height: 1.8;
+    color: #f5f6f7;
+  }
+  p {font-size: 16px;}
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+    background-color: #1abc9c; /* Green */
+    color: #ffffff;
+  }
+  .bg-2 { 
+    background-color: #474e5d; /* Dark Blue */
+    color: #ffffff;
+  }
+  .bg-3 { 
+    background-color: #ffffff; /* White */
+    color: #555555;
+  }
+  .bg-4 { 
+    background-color: #2f2f2f; /* Black Gray */
+    color: #fff;
+  }
+  .container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
 
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(255, 255, 255, 1); /* Adjust the opacity as needed */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 2;
-        }
-
-        .content {
-    text-align: center;
-    z-index: 0;
-    margin:20px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    margin: 0 auto;
-    position: absolute;
-}
-
-        .password-input {
-            display: block;
-            margin: 10px auto;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 16px;
-            width: 80%;
-            max-width: 300px;
-            box-sizing: border-box;
-        }
-
-        .hidden {
-            display: none;
-        }
-    </style>
-    <script>
-        function validatePassword() {
-            var passwordInput = document.getElementById("password");
-            var password = passwordInput.value;
-
-            if (password === "yourpassword") { // Replace "yourpassword" with the actual password
-                document.getElementById("overlay").classList.add("hidden");
-            } else {
-                alert("Incorrect password! Please try again.");
-            }
-        }
-    </script>
+  </style>
 </head>
 <body>
-    <div class="overlay" id="overlay">
-        <div class="content">
-            <h1>Please enter the password:</h1>
-            <input type="password" class="password-input" id="password" placeholder="Password">
-            <button onclick="validatePassword()">Submit</button>
-        </div>
-    </div>
-
-    <div class="content">
-        <p>Hà Nội, ngày 14 tháng 5 năm 2023, 2h sáng trong căn phòng tối với nhạc lofi bên tai.
+<!-- First Container -->
+<div class="container-fluid bg-1 text-center">
+  <h3>Hà Nội, ngày 14 tháng 5 năm 2023, 2h sáng trong căn phòng tối với nhạc lofi bên tai.
 _____________
 Trần Minh Ngọc - một cái tên gần gũi mà lại xa lạ với t, tại sao ư? Có lẽ là do lớp mình nhiều Ngọc quá nên t sợ nói ra thì sợ nhầm lẫn với ai đó, hoặc đơn giản vì ...... t thấy ngại? Ừ, khá đúng, t từng kể cho m là t nhát gái rồi mà đúng không, cho dù ngồi với nhau 3 năm rồi nhưng có lẽ để gọi lên tên m vẫn còn là một việc hơi khó với t (m để ý thì t khá ít khi nhắc tên m trong mọi cuộc hội thoại, kể cả là khi nói chuyện với Dũng, nhắc đến "Trần Ngọc" thì t lại bị khựng lại 1 chút, ngay cả bây giờ, choke vl 💀). Không biết đây có phải thú tội không nữa nhưng t thấy đến cái tên bạn nói ra còn ngại thì cảm giác nó sao sao ấy 😒. Nhưng nếu điều này có khiến m chạnh lòng thì t cũng xin lỗi nhé. 
 Người ta vẫn hay nói tên của mỗi người ít nhiều  gắn liền với tính cách hay phẩm chất của người đó, t thấy đúng :) với t thì tên m từ đầu t cảm nhận được đó là một sự kiên trì, bền bỉ, vững vàng, công tâm và chắc chắn nhưng kèm theo đó là một chút sự ngang bướng, bảo thủ ? 3 năm rồi và t thấy nó cũng đúng chứ :)). T khá chắc rằng mỗi người trong xã hội cũng đều mang cho mình "những chiếc mặt nạ", có thể là mặt nạ tính cách hay chỉ đơn giản là để che giấu những bí mật và sự thật *đen tối* (t cũng không phủ nhận là t mang cho mình vài cái thật -.-). Cho dù m có hay không đi chăng nữa thì t không biết :)) nhưng cảm nhận của t về tính cách của m là như trên 🙄. 
@@ -92,7 +53,8 @@ Bí quá, 3h rồi -.- xem "anime" r ngủ thôi.
 _____________
 10h30, dậy, Ngọc rep mình, chắc trong lòng đang tức tối t về một điều gì đó, khá chắc là khó chịu với sự vô cảm của mình, mình không rep, vì chả biết rep gì nữa, nhưng viết thì vẫn phải tiếp, không thể để cảm xúc lấn át bản thân được.
 _____________
-3 năm, nó không dài mà cũng không ngắn, vừa đủ để tạo ra những kỉ niệm đẹp và một sợi dây gắn bó bền vững. Quay về năm lớp 10, chẳng biết cơ duyên nào lại đẩy t ngồi với m, chỉ biết là hồi đấy, cô đánh số thứ tự mọi người rồi xếp chỗ, t thì chân ướt chân ráo bước vào trường, chẳng quen ai, may sao xưa đi học Hải Dớ nên quen được vài đứa (nói là vài nhưng chắc có mỗi Đăng Huy). Và suốt lúc xếp chỗ, t đã mong là được ngồi cạnh người quen để không bị bỡ ngỡ, là con trai thì càng tốt, để r, 26 - Trần Minh Ngọc, ờ, một bạn gái 💀 xong lại còn không quen, nghe tệ nhỉ, t sắp tiêu r, vừa ngồi vào chỗ thôi mà cảm thấy hào quang từ bạn phát ra phải khiến mình cúi cái mặt xuống nhìn vào điện thoại một cách vô hồn (tỏ vẻ ngầu lòi lướt fb thôi chứ có tập trung mẹ gì đâu). Để rồi, cô Hà bảo ĐHuy xem lớp mình đã có gr lớp j đó chưa - "có rồi cô ạ, bạn nào chưa vào thì vào đi nhé", "wtf, sao vừa mới nhập học mà đã có gr lớp r???", sau này bất ngờ hơn khi biết nó còn được tạo trước cả tháng trời -.-, tối cổ quá, các bạn vào hết rồi mà mình vẫn chưa vào, lo lắng, sợ sệt vì cứ đà này không vào nổi gr lớp mất (ngại đến mức mà đến Đ</p>
-    </div>
+3 năm, nó không dài mà cũng không ngắn, vừa đủ để tạo ra những kỉ niệm đẹp và một sợi dây gắn bó bền vững. Quay về năm lớp 10, chẳng biết cơ duyên nào lại đẩy t ngồi với m, chỉ biết là hồi đấy, cô đánh số thứ tự mọi người rồi xếp chỗ, t thì chân ướt chân ráo bước vào trường, chẳng quen ai, may sao xưa đi học Hải Dớ nên quen được vài đứa (nói là vài nhưng chắc có mỗi Đăng Huy). Và suốt lúc xếp chỗ, t đã mong là được ngồi cạnh người quen để không bị bỡ ngỡ, là con trai thì càng tốt, để r, 26 - Trần Minh Ngọc, ờ, một bạn gái 💀 xong lại còn không quen, nghe tệ nhỉ, t sắp tiêu r, vừa ngồi vào chỗ thôi mà cảm thấy hào quang từ bạn phát ra phải khiến mình cúi cái mặt xuống nhìn vào điện thoại một cách vô hồn (tỏ vẻ ngầu lòi lướt fb thôi chứ có tập trung mẹ gì đâu). Để rồi, cô Hà bảo ĐHuy xem lớp mình đã có gr lớp j đó chưa - "có rồi cô ạ, bạn nào chưa vào thì vào đi nhé", "wtf, sao vừa mới nhập học mà đã có gr lớp r???", sau này bất ngờ hơn khi biết nó còn được tạo trước cả tháng trời -.-, tối cổ quá, các bạn vào hết rồi mà mình vẫn chưa vào, lo lắng, sợ sệt vì cứ đà này không vào nổi gr lớp mất (ngại đến mức mà đến Đ</h3>
+</div>
+
 </body>
 </html>
