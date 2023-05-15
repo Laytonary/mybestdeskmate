@@ -1,40 +1,75 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Gradient Background with Centered Content</title>
+    <title>Gradient Background with Password Layer</title>
     <style>
         body {
             margin: 0;
             padding: 0;
-            background: linear-gradient(to bottom right, #FFC0CB, #ADD8E6);
-            background-size: cover;
-            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #ff9966, #ff5e62); /* Replace with your desired gradient colors */
+            height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            min-height: 100vh;
-            font-family: Arial, sans-serif;
         }
-
+        
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.8); /* Adjust the opacity as needed */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+        }
+        
         .content {
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            border-radius: 10px;
-            max-width: 80%;
             text-align: center;
+            z-index: 3;
         }
-
-        @media (max-width: 768px) {
-            .content {
-                max-width: 90%;
-            }
+        
+        .password-input {
+            display: inline-block;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        .hidden {
+            display: none;
         }
     </style>
+    <script>
+        function validatePassword() {
+            var passwordInput = document.getElementById("password");
+            var password = passwordInput.value;
+            
+            if (password === "tranminhngoc") { // Replace "yourpassword" with the actual password
+                document.getElementById("overlay").classList.add("hidden");
+            } else {
+                alert("Incorrect password! Please try again.");
+            }
+        }
+    </script>
 </head>
 <body>
+    <div class="overlay" id="overlay">
+        <div class="content">
+            <h1>Please enter the password:</h1>
+            <input type="password" class="password-input" id="password">
+            <br>
+            <button onclick="validatePassword()">Submit</button>
+        </div>
+    </div>
+
     <div class="content">
         <h1>Welcome to My Website!</h1>
-        <p>This is a sample website with a gradient background and centered content. Feel free to replace this text with your own content.</p>
+        <p>This is the content of my website.</p>
     </div>
 </body>
 </html>
